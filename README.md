@@ -127,4 +127,4 @@ parsecmgmt -a clean
 # Author
 
 Moawapang Imsong
-Research Scholar
+
