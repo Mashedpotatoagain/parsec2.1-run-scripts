@@ -15,19 +15,31 @@ Each script launches a specific benchmark workload and collects simulation stati
 Example:
 
 ```bash
-./buildnfigs/depre.rcSed/example/fs.py \
---script=run_bodytrack.sh
+./build/X86/gem5.opt configs/example/fs.py \
+--script=run_bodytrack.rcS
 ```
 
-Example:
+Example for PARSEC3.0:
 
 ```bash
-m5 resetstats
-cd /parsec-benchmark
+cd /home/gem5/parsec-benchmark
 source env.sh
-parsecmgmt -a run -p bodytraci sim.rcSium -n 1
-m5 dumpstats
+parsecmgmt -a run -p blackscholes -c gcc-hooks -i simlarge -n
+sleep 5
 m5 exit
+```
+
+Example for PARSEC2.1:
+
+```bash
+cd /parsec/install/bin
+/sbin/m5 switchcpu
+/sbin/m5 dumpstats
+/sbin/m5 resetstats
+./blackscholes 16 /parsec/install/inputs/blackscholes/in_16.txt /parsec/install/inputs/blackscholes/prices.txt
+echo "Done :D"
+/sbin/m5 exit
+/sbin/m5 exit
 ```
 
 ---
