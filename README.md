@@ -1,8 +1,8 @@
-# PARSEC 2.1 Run Scripts README
+# PARSEC 2.1 & 3.0 Run Scripts README
 
 ## Overview
 
-This folder contains shell scripts used to run PARSEC 2.1 benchmarks inside gem5 Full-System simulations.
+This folder contains shell scripts used to run PARSEC 2.1 & 3.0 benchmarks inside gem5 Full-System simulations.
 
 Each script launches a specific benchmark workload and collects simulation statistics.
 
@@ -10,36 +10,14 @@ Each script launches a specific benchmark workload and collects simulation stati
 
 # Files
 
-```bash
-S
-run_blacksc.rcSes.
-run_dedup.rcS.rcSn_facerret.r.rcSrun_fluS
-r.rcSfreqmine.lus.rcS.run_swapti.rcSrun_x.sh
-```
-
-Exe.rcSable
-
-Before .rcS, make it executa+.rcSun_bodyripts e.rcSut
-
---enc.rcSrk Script.rcS`bash
-./run_bodytrack.sh
-
-````
-
-These scripts arypically passed to gem5 u` option.
+.
 
 Example:
 
 ```bash
 ./buildnfigs/depre.rcSed/example/fs.py \
 --script=run_bodytrack.sh
-````
-
----
-
-# .rcSical Scriplow
-
-Most scripts perform the followistatistics 2. Enter PARSEC .rcSectory 3. Load PARSEC environmmark 5. Dump statistics 6. Exit simulation
+```
 
 Example:
 
@@ -63,11 +41,7 @@ m5 exit
 | simlarge  | Large workload       |
 | native    | Full native workload |
 
-Example:
-
-```bash
-parsecmgmt -a run -p blackscholes -i sim.rcSium -n 1
-```
+````
 
 ---
 
@@ -77,7 +51,7 @@ Simulation outputs are usually stored in:
 
 ```bash
 m5out/
-```
+````
 
 Common files:
 
@@ -90,22 +64,12 @@ Common files:
 
 ---
 
-# Saving Logs
-
-To save simulator output:
-
-```bash
-./build/X86/gem5.opt configs/... > simulation.log 2>&1
-```
-
----
-
 # Cleaning Benchmark Outputs
 
 Clean a benchmark:
 
 ```bash
-parsecmgmt -a clean -p bodytrack
+parsecmgmt -a clean -p <benchmark>
 ```
 
 Clean all benchmarks:
@@ -127,4 +91,3 @@ parsecmgmt -a clean
 # Author
 
 Moawapang Imsong
-
