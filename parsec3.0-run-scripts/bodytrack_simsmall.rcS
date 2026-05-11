@@ -1,0 +1,7 @@
+#!/bin/sh
+
+cd /home/gem5/parsec-benchmark
+source env.sh
+parsecmgmt -a run -p bodytrack -c gcc-hooks -i simsmall -n 
+sleep 5
+m5 exit
